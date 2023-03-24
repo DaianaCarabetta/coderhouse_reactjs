@@ -1,29 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-import NavBar from './Components/NavBar/NavBar';
-import CartWidget from './Components/CartWidget/CartWidget';
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import Home from "./Components/Home/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavBar from "./Components/NavBar/NavBar";
+import Barbells from "./Components/Barbells/Barbells";
+import ProductDetails from "./Components/ProductDetails/ProductDetails";
+import Weights from "./Components/Weights/Weights";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
-  let greeting = 'Lo sentimos, el producto no está disponible'
+  const greeting = "Lo sentimos, no hay productos disponibles";
+
   return (
-    <div className="App">
-      <header className='header'>
-        <NavBar></NavBar>
-      </header>
-      <body>
-        <div class="d-flex flex-column min-vh-100 min-vw-100">
-          <div class="d-flex flex-grow-1 justify-content-center align-items-center">
-           <ItemListContainer greeting={greeting}></ItemListContainer>
-          </div>
-        </div>
-      </body>
-    </div>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route exact path="/" element={<Home greeting={greeting} />}></Route>
+        <Route
+          exact
+          path="/barras"
+          element={<Barbells greeting={greeting} />}
+        ></Route>
+        <Route
+          exact
+          path="/discos"
+          element={<Weights greeting={greeting} />}
+        ></Route>
+        <Route exact path="/product/:type/:id" element={<ProductDetails />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
-
-
-
-

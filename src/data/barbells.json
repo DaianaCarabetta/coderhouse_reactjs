@@ -1,0 +1,59 @@
+[
+  {
+    "id": 0,
+    "title": "BARRA OLIMPICA 1.80 MTS 20 KG (bujes)",
+    "brand": "Fenix",
+    "description": "Barra olimpica con bujes",
+    "price": 42000,
+    "image_principal": "https://www.fenixequipment.com.ar/2359-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg",
+    "images": [
+      {
+        "url": "https://www.fenixequipment.com.ar/2359-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg"
+      },
+      {
+        "url": "https://www.fenixequipment.com.ar/2784-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg"
+      },
+      {
+        "url": "https://www.fenixequipment.com.ar/2777-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "BARRA OLIMPICA 1.80 MTS 15 KG (bujes)",
+    "brand": "Fenix",
+    "description": "Barra olimpica con bujes.",
+    "price": 40000,
+    "image_principal": "https://www.fenixequipment.com.ar/2359-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg",
+    "images": [
+      {
+        "url": "https://www.fenixequipment.com.ar/2359-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg"
+      },
+      {
+        "url": "https://www.fenixequipment.com.ar/2784-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg"
+      },
+      {
+        "url": "https://www.fenixequipment.com.ar/2777-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "BARRA OLIMPICA 1.80 MTS 15 KG PRO",
+    "brand": "Fenix",
+    "description": "Barra olimpica con rulemanes.",
+    "price": 50000,
+    "image_principal": "https://www.fenixequipment.com.ar/2359-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg",
+    "images": [
+      {
+        "url": "https://www.fenixequipment.com.ar/2359-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg"
+      },
+      {
+        "url": "https://www.fenixequipment.com.ar/2784-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg"
+      },
+      {
+        "url": "https://www.fenixequipment.com.ar/2777-large_default/barra-olimpica-20kg-220-mts-nacional-a-buje.jpg"
+      }
+    ]
+  }
+]
