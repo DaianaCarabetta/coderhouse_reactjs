@@ -8,13 +8,13 @@ function Products(props) {
         <div className="row">
           {props.products.map((product) => (
             <div key={product.id} className="col">
-              <Product type={props.type} product={product}></Product>
+              <Product product={product}></Product>
             </div>
           ))}
         </div>
       ) : (
         <div>
-          <p>Sin stock!: {props.greeting}</p>
+          <p>Sin stock! - Lo sentimos mucho</p>
         </div>
       )}
     </Fragment>

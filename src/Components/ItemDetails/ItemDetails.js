@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import SlideShow from "../SlideShow/SlideShow";
+import * as ProductsService from "../../Services/ProductsService";
+import Loader from "../Loader/Loader";
+import ItemCount from "../ItemCount/ItemCount";
 
-function ProductDetails(props) {
-  let { id, type } = useParams();
-  let data = require(`../../data/${type}.json`);
-  let product = data[id];
+function ItemDetails() {
+  let { id } = useParams();
+  const [product, setProduct] = useState();
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchProduct() {
+      const product = await ProductsService.getProduct(parseInt(id));
+      setProduct(product);
+      setLoading(false);
+    }
+    fetchProduct();
+  }, [id])
+
+  if(isLoading) return (
+    <Loader/>
+  )
+
   return (
     <div className="container mt-5 mb-5">
       <div className="row d-flex justify-content-center">
@@ -29,6 +46,7 @@ function ProductDetails(props) {
                   <p className="about">{product.description}</p>
 
                   <div className="cart mt-4 align-items-center">
+                    <ItemCount/>
                     <button className="btn btn-danger text-uppercase mr-2 px-4">
                       Agregar al carrito
                     </button>
@@ -45,4 +63,4 @@ function ProductDetails(props) {
   );
 }
 
-export default ProductDetails;
+export default ItemDetails;
