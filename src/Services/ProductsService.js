@@ -1,16 +1,15 @@
-import axios from "axios";
+import * as FirebaseService from './FirebaseService'
 
-const getProducts = async(category) => {
-  const products = await axios.get('https://api.jsonbin.io/v3/b/642498b7ace6f33a22fffd9f?meta=false').then((res) => res.data)
-  if(category){
-    return products.filter((product) => product.category === category);
+const getProducts = async(queryFilterArray) => {  
+  if(queryFilterArray){
+    return await FirebaseService.list('items', queryFilterArray)
   }else{
-    return products;
+    return await FirebaseService.list('items')
   }
 }
 
 const getProduct = async(id) => {
-    return (await getProducts()).find((product) => product.id === id);
+    return await FirebaseService.get('items', id)
 }
 
 export { getProduct, getProducts }

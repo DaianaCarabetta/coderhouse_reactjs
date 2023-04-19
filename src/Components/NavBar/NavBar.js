@@ -1,7 +1,10 @@
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../Contexts/CartContext";
 
 function NavBar() {
+  const { cartCounter } = useCartContext();
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
