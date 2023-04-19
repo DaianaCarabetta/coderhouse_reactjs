@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+<h1 align="center"> STRONG Ecommerce</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Proyecto final para el curso React Js de Coderhouse
 
-## Available Scripts
+Para este desafío realicé el desarrollo de un ecommerce relacionado con la venta de equipamento de gimnasio.
 
-In the project directory, you can run:
+## Caracteristicas
 
-### `npm start`
+- Montado con ReactJS
+- Collección en firestore
+- Categorías de productos
+- Detalles de cada producto
+- Diseño responsive y adaptativo
+- React Context
+- Loader Screen
+- Lista de items, Detalle y Carrito.
+- Incluye checkout con envío de orden a firestore
+- Persistent Data (Local Storage)
+- Navbar Clasico y Burger menu en pantallas de menor resolución.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Herramientas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Utilicé las siguientes herramientas y tecnologías para levantar el sitio
 
-### `npm test`
+- [Bootstrap 5.0](https://github.com/twbs/bootstrap):
+  Algunos componentes tales como el navbar responsivo a burger menu, las carts de los productos y algunos íconos provienen de Bootsrap con algunas modificaciones para que sirvan de forma eficiente al sitio tanto funcional como visualmente.
+- [Firebase](https://github.com/firebase/):
+  Se usó firestore para la base de datos de productos y las órdenes de compra de los usuarios.
+- [Yup](https://github.com/jquense/yup): Para generar un esquema de validacion de campos, para el formulario del checkout.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h1 align="center">
+  <img src="https://user-images.githubusercontent.com/115516561/232940895-7ad35f5f-c96a-490d-bc6d-35f27cddc96a.gif"/>
+</h1>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Item detail
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h1 align="center">
+  <img src="https://user-images.githubusercontent.com/115516561/232938826-d29bbab5-b82a-4368-9e98-98fa5e994d68.gif"/>
+</h1>
 
-### `npm run eject`
+### Order confimation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h1 align="center">
+    <img src="https://user-images.githubusercontent.com/115516561/232939395-6f28b396-8275-4300-9323-e7d8d962ee44.gif"/>
+</h1>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+git clone https://github.com/Caracolaracol/ReactJsFinal-coderhouse.git
+```
 
-## Learn More
+Install npm packages:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+ npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run the app:
 
-### Code Splitting
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Licence
 
-### Analyzing the Bundle Size
+💡 Distributed under the MIT License. See LICENSE.txt for more information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contact
 
-### Making a Progressive Web App
+<a>[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/daiana-carabetta)</a>&nbsp;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Thank you
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Take Care! 💛

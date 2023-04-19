@@ -12,7 +12,12 @@ function ItemListContainer() {
   useEffect(() => {
     async function fetchProducts() {
       setLoading(true);
-      const products = await ProductsService.getProducts(categoryId)
+      const queryFilterArray = categoryId ? [{
+        field: 'category',
+        condition: '==',
+        value: categoryId
+      }] : null
+      const products = await ProductsService.getProducts(queryFilterArray)
       setProducts(products);
       setLoading(false);
     }

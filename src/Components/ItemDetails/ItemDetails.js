@@ -4,15 +4,24 @@ import SlideShow from "../SlideShow/SlideShow";
 import * as ProductsService from "../../Services/ProductsService";
 import Loader from "../Loader/Loader";
 import ItemCount from "../ItemCount/ItemCount";
+import { useCartContext } from "../../Contexts/CartContext";
+import { useNavigate } from "react-router-dom";
 
 function ItemDetails() {
   let { id } = useParams();
   const [product, setProduct] = useState();
   const [isLoading, setLoading] = useState(true);
+  const { addCartProducts, itemCounter, setItemCounter } = useCartContext();
+  const navigate = useNavigate();
+
+  const addProducts = (product, itemCounter) => {
+    addCartProducts(product, itemCounter);
+    navigate(`/category/${product.category}`);
+  }
 
   useEffect(() => {
     async function fetchProduct() {
-      const product = await ProductsService.getProduct(parseInt(id));
+      const product = await ProductsService.getProduct(id);
       setProduct(product);
       setLoading(false);
     }
@@ -46,8 +55,14 @@ function ItemDetails() {
                   <p className="about">{product.description}</p>
 
                   <div className="cart mt-4 align-items-center">
-                    <ItemCount/>
-                    <button className="btn btn-danger text-uppercase mr-2 px-4">
+                    <div className="w-50 ms-0 mb-3">
+                      <ItemCount 
+                        postAdd={setItemCounter}
+                        postSubstract={setItemCounter}
+                        postChange={setItemCounter}
+                      />
+                    </div>
+                    <button onClick={() => addProducts(product, itemCounter)} className="btn btn-danger text-uppercase mr-2 px-4">
                       Agregar al carrito
                     </button>
                     <i className="fa fa-heart text-muted"></i>
