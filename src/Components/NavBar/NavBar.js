@@ -1,7 +1,10 @@
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../Contexts/CartContext";
 
 function NavBar() {
+  const { cartCounter } = useCartContext();
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -22,25 +25,15 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/barras">
+              <Link className="nav-link" aria-current="page" to="/category/barras">
                 Barras
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/discos">
+              <Link className="nav-link" aria-current="page" to="/category/discos">
                 Discos
               </Link>
             </li>
-            {/* <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/Dumbells">
-                Dumbells
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/kettlebells">
-                kettlebells
-              </Link>
-            </li> */}
           </ul>
           <CartWidget marginRight="30px" />
           <form className="d-flex">

@@ -4,7 +4,7 @@ import { Card } from "./Card";
 
 function Product(props) {
   return (
-    <Link style={{textDecoration: 'none'}} to={`/product/${props.type}/${props.product.id}`}>
+    <Link style={{textDecoration: 'none'}} to={`/item/${props.product.id}`}>
       <Card className="card shadow-lg" style={{ width: "18rem" }}>
         <img
           src={props.product.image_principal}
